@@ -1,0 +1,393 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!-- Bootstrap CSS -->
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- Font Style Import-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+  <!--Custom JS File-->
+  <script src="{% static 'clutter_style/simple.js' %}"></script>
+
+  <!--Personal Style Sheet-->
+  <link rel="stylesheet" type"text/css" href="{% static 'clutter_style/clutter_style.css' %}">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+
+<style>
+  .btn-primary {
+      background: #57426a;
+      color: #ffffff;
+  }
+  
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+      background: #57426a;
+  }
+  
+  .btn-primary:active, .btn-primary.active {
+      background: #57426a;
+      box-shadow: none;
+  }
+  </style>
+</head>
+
+
+
+<body style="background-color:#e0e0e0">
+  <nav class="navbar navbar-expand-lg navbar-custom ">
+    <a class="navbar-brand" href="home.html">Clutter.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contacts.html">Contacts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="finances.html">Finances</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="groupmanagement.html"> Group Management </span></a>
+
+          <!--Droopdown List of page routes with their page reference HTMl files for Media-->
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle bg-#eeeeee" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Media
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="books.html">Books</a>
+            <a class="dropdown-item" href="movies.html">Movies</a>
+            <a class="dropdown-item" href="shows.html">Shows</a>
+            <a class="dropdown-item" href="music.html">Music</a>
+
+          </div>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle bg-#eeeeee" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Settings</a>
+
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#confirmation">Delete Account</a>
+            <a class="dropdown-item" href="logout.html"> Logout</a>
+            <!-- References confirmation dialogue-->
+
+        </li>
+        </li>
+      </ul>
+
+
+      <!--Inspirational Quote-->
+      <div class="mr-auto" style="width: 700px;">
+        <blockquote class="blockquote blockquote-light">
+          <p class="mb-1"> {{inspo.inspo_description}}</p>
+          <footer class="blockquote-footer">{{inspo.inspo_author}}</footer>
+        </blockquote>
+
+      </div>
+
+
+      <!-- Dialogue button to confirm confirmation of Account deletion-->
+      <!-- Modal -->
+      <div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Are you sure you wish to delete your account?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+
+              </button>
+            </div>
+            <div class="modal-body">
+              <button class="btn btn-danger my-2 my-sm-0" type="submit">Delete My Account</button>
+            </div>
+            <div class="modal-footer">
+
+  </nav>
+
+
+
+
+
+  <!---Search bar container -->
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <form class="form-inline my-2 my-lg-0">
+
+
+        <input class="form-control mr-sm-2 " type="text" id="contactSearch" onkeyup="Search()"
+          style="font-family:Arial, FontAwesome" placeholder="&#xF002; Search">
+
+      </form>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <p1> Contacts</p1>
+        </li>
+        <!----Page Title-->
+        <li>
+
+        </li>
+
+      </ul>
+
+    </nav>
+  </div>
+
+
+
+
+  <!--Contacts table Body-->
+  <div class="container-fluid custom-container-table">
+    <div class="row">
+      <div class="col-12">
+        <div class="container-fluid custom-container-table">
+          <table class="table table-bordered table-light table-hover" id="contacts-add-table">
+            <form action="{% url 'contacts_add' %}">
+              <td>
+                <class="form-group">
+                  <label for="name" class="col-form-label">Name</label>
+                  <input type="text" id="name" name="name">
+
+                  <class="form-group">
+                    <label for="middle" class="col-form-label">Middle</label>
+                    <input type="text" id="middle" name="middle">
+
+                    <class="form-group">
+                      <label for="last" class="col-form-label">Last</label>
+                      <input type="text" id="last" name="last">
+
+                      <class="form-group">
+                        <label for="phone" class="col-form-label">Phone</label>
+                        <input type="text" id="phone" name="phone">
+
+                        <class="form-group">
+                          <label for="email" class="col-form-label">E-mail</label>
+                          <input type="text" id="email" name="email">
+
+                          <class="form-group">
+                            <label for="relationship" class="col-form-label">Relationship</label>
+                            <input type="text" id="relationship" name="relationship">
+
+                            <class="form-group">
+                              <label for="birthday" class="col-form-label">Birthday</label>
+                              <input type="text" id="birthday" name="birthday">
+
+                              <class="form-group">
+                                <label for="location" class="col-form-label">Location</label>
+                                <input type="text" id="location" name="location">
+
+                                <class="form-group">
+                                  <label for="note" class="col-form-label">Note</label>
+                                  <input type="text" id="note" name="note">
+  
+                                <label for="add" class="col-form-label">add</label>
+                                <button class="btn btn-primary my-2 my-sm-0" <input type='submit'
+                                  value='submit' />+</button>
+              </td>
+              </td>
+            </form>
+          </table>
+          <table class="table table-bordered table-light table-hover" id="contacts-table">
+            <thead>
+              <tr class="table-active">
+                <th scope="col">Name</th>
+                <th scope="col">Middle</th>
+                <th scope="col">Last</th>
+                <th scope="col">Phone</th>
+                <th scope="col">E-maill</th>
+                <th scope="col">Relationship</th>
+                <th scope="col">Birthday</th>
+                <th scope="col">Location</th>
+                <th scope="col">Note</th>
+                <th>Delete</th>
+                <th>Update</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              {% for contact in contacts %}
+              <tr class="table-light">
+                <td scope="row">{{contact.contact_first_name}}</td>
+                <td>{{contact.contact_middle_name}} </td>
+                <td>{{contact.contact_last_name}} </td>
+                <td>{{contact.contact_phone_num}} </td>
+                <td>{{contact.contact_email}} </td>
+                <td>{{contact.contact_relationship}} </td>
+                <td>{{contact.contact_birthday}}</td>
+                <td>{{contact.contact_location}}</td>
+                <td>{{contact.contact_note}}</td>
+                
+                <form action="{% url 'contacts_delete' %}">
+                  <td>
+                    <input type="hidden" name="pk" value="{{contact.idcontacts}}">
+                    <button class="btn btn-danger my-2 my-sm-0" <input type='submit' value='submit' />x</button>
+                  </td>
+                </form>
+                <form action="{% url 'contacts_update' %}">
+                  <td>
+                    <input type="hidden" id="firstValue" value="{{contact.idcontacts}}">
+                    <button type="button" class="btn btn-secondary feed-id" data-toggle="modal"
+                      data-target="#contactsModal" data-id="{{contact.idcontacts}}">
+                      Update</button>
+                  </td>
+                </form>
+                {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal Dialogue box for Contacts update button-->
+  <div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="contactsLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Contacts</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+
+
+
+            <form action="{% url 'contacts_update' %}">
+
+              <div class="form-group">
+                <div class="row Justify-content-around">
+                  
+                  <div class="col-3">
+                    <label for="name" class="col-form-label">First Name:</label>
+                    <input class="form-control mr-sm-2" type="text" placeholder="First Name" aria-label="Search id"
+                      name="name">
+                  </div>
+
+                  <div class="col-3">
+                    <label for="middle" class="col-form-label">Middle Name:</label>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Middle Name" aria-label="Search"
+                      name="middle">
+                  </div>
+
+                  <div class="col-3">
+                    <label for="last" class="col-form-label">Last Name:</label>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Last Name" aria-label="Search"
+                      name="last">
+                  </div>
+
+                </div>
+
+
+                <div class="form-group">
+                  <div class="row Justify-content-around">
+                    <div class="col-3">
+                      <label for="relation" class="col-form-label">Relationship:</label>
+                      <input class="form-control mr-sm-2" type="text" placeholder="Relationship" aria-label="Search id"
+                        name="relation">
+                    </div>
+                    <div class="col-8">
+                      <label for="phone" class="col-form-label">Phone-Number:</label>
+                      <input class="form-control mr-sm-2" type="text" placeholder="phone" aria-label="Search"
+                        name="phone">
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <label for="email" class="col-form-label">E-mail:</label>
+                    <input class="form-control mr-sm-2" type="text" placeholder="email" aria-label="Search"
+                      name="email">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row Justify-content-around">
+                    <div class="col-3">
+                      <label for="birthday" class="col-form-label">birthday:</label>
+                      <input class="form-control mr-sm-2" type="text" placeholder="Birthday" aria-label="Search id"
+                        name="birthday">
+                    </div>
+                    <div class="col-8">
+                      <label for="location" class="col-form-label">Location:</label>
+                      <input class="form-control mr-sm-2" type="text" placeholder="Location" aria-label="Search"
+                        name="location">
+                    </div>
+
+
+                    <div class="col-8">
+                      <label for="note" class="col-form-label">Note:</label>
+                       <input class="form-control mr-sm-2" type="text" placeholder="note" aria-label="Search"
+                        name="note">
+                    </div>
+
+                  <script>
+                    $(document).ready(function () {
+                      $('body').on('click', '.feed-id', function () {
+                        document.getElementById("feed_id").value = $(this).attr('data-id');
+                        console.log($(this).attr('data-id'));
+                      });
+                    });
+                  </script>
+
+                  <input id="feed_id" name="pk" type="hidden" value="" />
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" <input type='submit' value='submit' />Save changes</button>
+                    </td>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+
+
+</body>

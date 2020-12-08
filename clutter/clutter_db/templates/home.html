@@ -1,0 +1,477 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- Font Style Import-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!--Custom JS File-->
+  <script src="simple.js"></script>
+
+  <!--Personal Style Sheet-->
+  <link rel="stylesheet" type="text/css" href="{% static 'clutter_style/clutter_style.css' %}">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+
+<style>
+.btn-primary {
+    background: #57426a;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #57426a;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #57426a;
+    box-shadow: none;
+}
+</style>
+
+</head>
+
+<body style="background-color:#e0e0e0">
+  <nav class="navbar navbar-expand-lg navbar-custom ">
+    <a class="navbar-brand" href="home.html">Clutter.</a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacts.html">Contacts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="finances.html">Finances</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="groupmanagement.html"> Group Management </span></a>
+
+          <!--Droopdown List of page routes with their page reference HTMl files for Media-->
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle bg-#eeeeee" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Media
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="books.html">Books</a>
+            <a class="dropdown-item" href="movies.html">Movies</a>
+            <a class="dropdown-item" href="shows.html">Shows</a>
+            <a class="dropdown-item" href="music.html">Music</a>
+          </div>
+
+          <!-- Delete Account Dropdown button -->
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle bg-#eeeeee" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Settings</a>
+
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#confirmation">Delete Account</a>
+            <a class="dropdown-item" href="logout.html"> Logout</a>
+            <form action = "{% url 'logout.html' %}" method="GET">
+            </form>
+            <!-- References confirmation dialogue-->
+
+        </li>
+      </ul>
+
+      <!--Inspirational Quote-->
+      <div class="mr-auto" style="width: 700px;">
+        <blockquote class="blockquote blockquote-light">
+          <p class="mb-1"> {{inspo.inspo_description}}</p>
+          <footer class="blockquote-footer">{{inspo.inspo_author}}
+          </footer>
+        </blockquote>
+
+      </div>
+
+      <!-- Dialogue button to confirm confirmation of Account deletion-->
+      <!-- Modal -->
+      <div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Are you sure you wish to delete your account?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+
+              </button>
+            </div>
+            <div class="modal-body">
+              <button class="btn btn-danger my-2 my-sm-0" type="submit">Delete My Account</button>
+            </div>
+            <div class="modal-footer">
+
+  </nav>
+
+
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <p2> Home</p2>
+        </li>
+        <!----Page Title-->
+        <li>
+
+        </li>
+
+      </ul>
+
+    </nav>
+  </div>
+
+
+
+  <div class="modal fade" id="updateSticky" tabindex="-1" role="dialog" aria-labelledby="updateStickyModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Sticky</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+             <form action="{% url 'memo_update' %}">
+              <div class="form-group">
+                <label for="note-description" class="col-form-label">Notes:</label>
+                <textarea class="form-control" placeholder="Notes" id="note"
+                name='note'></textarea>
+              </div>
+              <script>
+                $(document).ready(function () {
+                  $('body').on('click', '.feed-id',function(){
+                  document.getElementById("feed_id").value = $(this).attr('data-id');
+                  console.log($(this).attr('data-id'));
+                  });
+                  });
+              </script>
+
+              <input id="feed_id" name="pk" type="hidden" value="" />
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button class="btn btn-primary" <input type='submit' value= 'submit'/>Save changes</button>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row justify-content-around ">
+      <div class="col-3 ">
+        <div class="container-fluid custom-container2">
+          <h>Notes</h>
+        </div>
+        <div class="row-12">
+          <table class="table table-bordered table-light table-hover" id="notes-table">
+            <thead>
+              <form action="{% url 'memo_add' %}">
+                <tr class="table-active">
+                  <th><button class="btn btn-primary my-2 my-sm-0 btn-custom" <input type='submit' value='submit' />+</button></th>
+                  <th>Notes</th>
+                </tr>
+              </form>
+            </thead>
+            <tbody>
+              {% for memo in memos %}
+              <tr class="table-light">
+                <form action="{% url 'memo_delete' %}">
+                  <td>
+                    <input type="hidden" name="pk" value="{{memo.idmemo}}">
+                    <button class="btn btn-danger my-2 my-sm-0" <input type='submit' value='submit' />x</button>
+                  </td>
+                </form action="{% url 'music_update' %}">
+                <td>
+                  <a href="#updateSticky" data-toggle="modal" data-target="#updateSticky"
+                  class="feed-id" data-id="{{memo.idmemo}}">
+                    <span style="display:block sticky">
+                      <div class="container-fluid sticky">
+                        {{memo.memo_content}}
+                      </div>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+            </tbody>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="container custom-container-table2">
+
+          <table class="table table-bordered table-light table-hover" id="event-add-table">
+            <form action="{% url 'event_add' %}">
+              <td>
+                <div class="input-group mb-3">
+                  <form action="{% url 'event_delete' %}">
+                    <label for="date" class="col-form-label">Date</label>
+                    <input type="text" id="date" class="form-control" name="date">
+
+                    <label for="time" class="col-form-label">Time</label>
+                    <input type="text" id="time" class="form-control" name="time">
+
+                    <label for="event" class="col-form-label">Event</label>
+                    <input type="text" id="event" class="form-control" name="event">
+
+                    <label for="location" class="col-form-label">Location</label>
+                    <input type="text" id="location" class="form-control" name="location">
+
+                    <button class="btn btn-primary my-2 my-sm-0" <input type='submit' value='submit' />+</button>
+              </td>
+            </form>
+        </div>
+        </td>
+        </form>
+        </table>
+        <table class="table table-bordered table-light table-hover" id="events-table">
+          <thead>
+            <tr class="table-active">
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Events</th>
+              <th scope="col">Location</th>
+              <th>Delete</th>
+              <th>Update</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            {% for event in events %}
+            <tr class="table-light">
+              <th scope="row">{{event.event_date}}</th>
+              <td>{{event.event_time}}</td>
+              <td>{{event.event_description}} </td>
+              <td>{{event.event_location}} </td>
+
+              <form action="{% url 'event_delete' %}">
+                <td>
+                  <input type="hidden" name="pk" value="{{event.idevent}}">
+                  <button class="btn btn-danger my-2 my-sm-0" <input type='submit' value='submit' />x</button>
+                </td>
+              </form>
+              <form action="{% url 'event_update' %}">
+                <td>
+                  <input type="hidden" id="firstValue" value="{{event.idevent}}">
+                  <button type="button" class="btn btn-secondary feed-id" data-toggle="modal" data-target="#eventModal"
+                    data-id="{{event.idevent}}"class="feed-id">
+                    Update</button>
+                </td>
+              </form>
+              {% endfor %}
+            </tr>
+            <tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="Container-fluid">
+        <div class="row-12">
+          <div class="container-fluid custom-container2">
+            <h> Tasks </h>
+          </div>
+        </div>
+        <div class="row-12">
+          <table class="table table-bordered table-light table-hover" id="tasks-table">
+            <thead>
+              <tr class="table-active">
+                <th scope="col">#</th>
+                <th scope="col">
+                  <form class="form-inline my-2 my-lg-0" action="{% url 'task_add' %}">
+                    <input class="form-control mr-sm-2" type="search" name='task' placeholder="Add a Task"
+                      aria-label="Search">
+                    <button class="btn btn-primary my-2 my-sm-0" <input type='submit' value='submit' />+</button></td>
+                  </form>
+                </th>
+                <th scope="col">Done</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for task in tasks %}
+              <tr class="table-light">
+                <td scope='row'>{{task.idtasks}}</td>
+                <td scope="row">{{task.task_descriptoin}}</td>
+                <form action="{% url 'task_delete' %}">
+                  <td>
+                    <div class="form-check">
+                      <input type="checkbox" name="checkbox" value="{{task.idtasks}}" class="checkbox"
+                        onchange="submit()" />
+                </form>
+        </div>
+        </td>
+        </form>
+        {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <!--Modal Dialogue box for Events update button-->
+
+  <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventsLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Events</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+
+            <form action="{% url 'event_update' %}">
+              <td>
+                <label for="date" class="col-form-label">Date</label>
+                <input type="text" id="date" class="form-control" name="date">
+
+                <label for="time" class="col-form-label">Time</label>
+                <input type="text" id="time" class="form-control" name="time">
+
+                <label for="event" class="col-form-label">Event</label>
+                <input type="text" id="event" class="form-control" name="event">
+
+                <label for="location" class="col-form-label">Location</label>
+                <input type="text" id="location" class="form-control" name="location">
+
+                <script>
+                  $(document).ready(function () {
+                    $('body').on('click', '.feed-id', function () {
+                      document.getElementById("feed_id").value = $(this).attr('data-id');
+                      console.log($(this).attr('data-id'));
+                    });
+                  });
+                </script>
+
+                <input id="feed_id" name="pk" type="hidden" value="" />
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button class="btn btn-primary" <input type='submit' value='submit' />Save</button>
+              </td>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--Modal Dialogue box for Memo update button--COPY?
+
+  <div class="modal fade" id="memoModal" tabindex="-1" role="dialog" aria-labelledby="memoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Memo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+
+            <form>
+
+              <div class="form-group">
+                <div class="row Justify-content-around">
+
+                  <div class="col-5">
+                    <label for="date" class="col-form-label">Date:</label>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Date" aria-label="Search id" id="date">
+                  </div>
+
+                  <div class="col-5">
+                    <label for="time" class="col-form-label">Time:</label>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Time" aria-label="Search" id="time">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row Justify-content-around">
+
+                    <div class="col-12">
+                      <label for="event-location" class="col-form-label">Location:</label>
+                      <input class="form-control mr-sm-2" type="text" placeholder="Event-Location" aria-label="Search"
+                        id="event-location">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="event-description" class="col-form-label">Event-Description:</label>
+                    <textarea class="form-control" placeholder="Event-Description" id="event-description"></textarea>
+                  </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  -->
+
+  <!--Footer-->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+
+
+</body>

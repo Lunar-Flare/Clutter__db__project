@@ -1,0 +1,296 @@
+.navbar-brand {
+  font-size: 94px;
+  font-weight: bold;
+  font-family: "Helvetica", sans-serif;  
+}
+
+
+.navbar-custom { 
+    background-color: #57426a; 
+} 
+
+.navbar-custom .navbar-brand, 
+        .navbar-custom .navbar-text { 
+            color: #b39cfb;
+             
+        } 
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #dbdde6;
+    
+    
+}
+blockquote p{
+    font-size:30px;
+    color: aliceblue;
+  }
+
+
+  p1 {
+    color:  #b39cfb;
+    text-indent: 35px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em;
+    margin-left:20.0em;
+    text-decoration: underline;
+    
+    
+  }
+
+  p2 {
+    color:  #b39cfb;
+    text-indent: 35px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em;
+    margin-left:30.0em;
+    text-decoration: underline;
+    
+    
+  }
+
+  
+  p3 {
+    color:  #b39cfb;
+    text-indent: 35px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em;
+    margin-left:27.0em;
+    text-decoration: underline;
+    
+    
+  }
+
+
+
+  .btn {
+    
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #57426a;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #57426a;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #57426a;
+    box-shadow: none;
+}
+
+.btn-custom{
+  background: #57426a;
+}
+
+.h1{
+    font-size: 15;
+}
+ul {
+    list-style-type: none;
+  }
+
+
+
+
+
+
+
+  
+ 
+      .my-container{
+          border: 1px solid green;
+
+      }
+      .my-column{
+        border: 1px solid red;
+          
+        }
+        .my-row{
+            border: 1px solid blue;
+          
+        }
+        
+        
+        /* override Bootstrap's container */
+        .container-fluid {
+            padding-right:40px;
+            padding-left:40px;
+            margin-right:auto;
+            margin-left:auto
+         }
+    
+        .custom-container{
+            background: white !important;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            height: 100px;
+            overflow:hidden
+
+            
+        }
+
+        .custom-container3{
+            background: grey !important;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            height: 100px;
+            overflow:hidden
+
+            
+        }
+
+        .custom-container2{
+            background: grey !important;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 0.9rem;
+            width: 200px;
+            overflow:hidden
+
+            
+        }
+
+        .sticky{
+            background: #faff60 !important;
+            height: 100px;
+            
+            margin-top: 1.0rem;
+            overflow:hidden
+
+
+        }
+
+        .custom-container-table{
+            margin-top: 1.0rem;
+        }
+        .custom-container-table2{
+            margin-top: 2.5rem;
+        }
+
+
+        .td1 {
+            text-align: center;
+            
+          }
+
+
+          .td2 {
+            text-align: right;
+            
+          }
+
+          .td3 {
+              text-align: left;
+          }
+
+          #contactSearch{
+            background-image: url('/css/searchicon.png');
+
+            
+          }
+
+
+          .loginContainer{
+            background: white !important;
+            display: flex;
+           border-radius: 25px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 7.0rem;
+            margin-bottom: 7.0rem;
+            width: 755px;
+            height:636px;
+            overflow:hidden
+
+          }
+
+          .button-custom {
+            background-color: #57426a;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+          }
+          
+          .button-custom:hover {
+            opacity: 0.8;
+          }
+         
+
+          .clutter-container{
+              width: 260px;
+              height: 105px;
+              background-color: grey;
+              border-radius: 25px;
+              text-align: center;
+              margin-bottom:3.5rem
+              
+              
+              
+              
+          }
+
+          .p5{
+              font-size: 65px;
+              color: #b39cfb;
+              font-weight: bold;
+              
+              
+          }
+          .loginContainer2{
+            background: white !important;
+            display: flex;
+           border-radius: 25px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 5.0rem;
+            margin-bottom: 5.0rem;
+            width: 680px;
+            height:560px;
+            overflow:hidden
+
+          }
+       
+
+        
+        
+          
+          
+          
+
+
+
+        
